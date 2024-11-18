@@ -1,0 +1,29 @@
+<div class="header">
+    <h1>CDH Image Retrieval System</h1>
+    <p>Upload images and find similar ones using Color Difference Histogram</p>
+</div>
+
+<div class="container">
+    <div class="upload-section">
+        <h2>Dataset Management</h2>
+        <div class="drop-zone" id="datasetDropZone">
+            <p>Drop images here or click to upload dataset</p>
+            <input type="file" id="datasetInput" multiple accept="image/*" style="display: none">
+            <button onclick="document.getElementById('datasetInput').click()">Select Files</button>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="datasetProgress"></div>
+        </div>
+        <p id="uploadStatus">No files uploaded</p>
+    </div>
+
+    <div class="upload-section">
+        <h2>Search Similar Images</h2>
+        <div class="drop-zone" id="searchDropZone">
+            <p>Drop an image here or click to search</p>
+            <input type="file" id="searchInput" accept="image/*" style="display: none">
+            <button onclick="document.getElementById('searchInput').click()">Select Image</button>
+        </div>
+        <div id="resultsGrid" class="results-grid"></div>
+    </div>
+</div>
